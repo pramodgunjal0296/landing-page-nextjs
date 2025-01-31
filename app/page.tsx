@@ -2,13 +2,12 @@
 import { useRef } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Section from "../components/Section";
 import HomePage from "@/components/pages/HomePage";
-import { SiWhatsapp } from "react-icons/si";
 import About from "@/components/pages/About";
 import Mbbs from "@/components/pages/Mbbs";
 import Universities from "@/components/pages/Universities";
 import Blogs from "@/components/pages/Blogs";
+import Image from "next/image";
 
 export default function Home() {
   const sections = {
@@ -32,10 +31,13 @@ export default function Home() {
           style={{ backgroundImage: "url('/view-school-building.png')" }}
         >
           <HomePage />
-          <div className="absolute bottom-[-20px]  sm:bottom-[-30px] right-4 md:right-10 cursor-pointer z-[9999] p-2 bg-white rounded-full shadow-lg">
-            <SiWhatsapp
+          <div className="absolute bottom-[-20px]  sm:bottom-[-30px] right-4 md:right-10 cursor-pointer z-[9999] p-2  rounded-full ">
+            <Image
+              src="/Whatsapp.png"
               className="w-12 h-12 sm:w-16 sm:h-16"
-              color="#1FAF38"
+              width={50}
+              height={50}
+              alt="whatsapp"
             />
           </div>
         </section>

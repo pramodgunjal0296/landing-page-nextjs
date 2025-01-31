@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi"; // Import icons
+import { FiMenu, FiX } from "react-icons/fi"; 
 
 export default function Navbar({ sections }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (section: string) => {
     sections[section].current?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false); // Close menu on selection (for mobile)
+    setIsOpen(false); 
   };
 
   return (
@@ -15,7 +15,6 @@ export default function Navbar({ sections }) {
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold text-white">Uzbekistan Med</h1>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-white text-2xl"
@@ -23,7 +22,6 @@ export default function Navbar({ sections }) {
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-4">
           {Object.keys(sections).map((key) =>
             key === "services" ? (

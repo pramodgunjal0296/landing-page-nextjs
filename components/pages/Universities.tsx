@@ -2,11 +2,9 @@
 
 import Image from "next/image";
 import { BiDollarCircle } from "react-icons/bi";
-import { FaCheckCircle } from "react-icons/fa";
 import { GrNotes } from "react-icons/gr";
 import { MdMessage } from "react-icons/md";
 import { RiGraduationCapLine } from "react-icons/ri";
-import { SiCrowdsource } from "react-icons/si";
 
 const stats = [
   { image: "/experties.png", count: "12+", label: "Years of expertise" },
