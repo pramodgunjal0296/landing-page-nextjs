@@ -10,7 +10,7 @@ import Blogs from "@/components/pages/Blogs";
 import Image from "next/image";
 
 export default function Home() {
-  const sections = {
+  const sections:any = {
     home: useRef(null),
     about: useRef(null),
     services: useRef(null),
