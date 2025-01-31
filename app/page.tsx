@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useRef } from "react";
 import Navbar from "../components/Navbar";
@@ -10,7 +11,7 @@ import Blogs from "@/components/pages/Blogs";
 import Image from "next/image";
 
 export default function Home() {
-  const sections:any = {
+  const sections: any = {
     home: useRef(null),
     about: useRef(null),
     services: useRef(null),
@@ -41,25 +42,12 @@ export default function Home() {
             />
           </div>
         </section>
-        {/* <section ref={sections.about}> */}
         <About sections={sections.about} />
         <Mbbs sections={sections.services} />
         <Universities sections={sections.universities} />
         <Blogs sections={sections.blogs} />
-        {/* </section> */}
-        {/* Other Sections Without Background Image
-        {Object.entries(sections).map(([key, ref]) =>
-          key === "services" ? (
-            // Change the title of the "services" section here
-            <Section key={key} sectionRef={ref} title="MBBS in Uzbekistan" />
-          ) : key !== "home" ? (
-            <Section
-              key={key}
-              sectionRef={ref}
-              title={key.charAt(0).toUpperCase() + key.slice(1)}
-            />
-          ) : null
-        )} */}
+     
+    
       </main>
 
       <Footer />

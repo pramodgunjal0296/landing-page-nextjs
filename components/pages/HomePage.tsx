@@ -12,18 +12,9 @@ const HomePage = () => {
 
       <div className="flex items-start justify-center z-10 cursor-pointer transition-transform duration-300 hover:scale-105">
         <Image src='/applyButton.png' width={40} height={60} alt="apply now "/>
-        {/* <button
-          className="px-6 py-3 cursor-pointer text-lg font-semibold text-white rounded-lg shadow-md transition-transform duration-300 hover:scale-105  ml-[-20px]"
-          style={{
-            backgroundImage: "url('/applyButton.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></button> */}
       </div>
       <div className="mt-24 flex items-center z-10 justify-center  w-full px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-6xl w-full">
-          {/* Left Side - Content */}
           <div className="flex flex-col items-center sm:items-start w-auto justify-start  pl-6 sm:pl-10 pb-6">
             <div className="border-l-4 border-sky-400 mb-8 sm:mb-auto">
               <div className="pl-4 ">
@@ -39,7 +30,7 @@ const HomePage = () => {
                   Top Universities
                 </h1>
 
-                {/* Features List */}
+              
                 <div className="space-y-3 mt-4">
                   {[
                     "Low-cost medical education starting from INR 5 Lacs*",
@@ -68,17 +59,17 @@ const HomePage = () => {
             </button>
           </div>
 
-          {/* Right Side - Image */}
+    
           <div className="relative w-full flex justify-center items-center">
-            {/* Black Background - Half Circle at Bottom */}
+           
             <div className="absolute bottom-0 bg-[#081D18] w-48 h-64 sm:w-72 sm:h-96 md:w-96 md:h-[28rem] rounded-t-full"></div>
 
-            {/* Doctor Image - Overlapping the Background */}
+      
             <Image
               src="/doctor_image.svg"
               alt="Doctor Image"
-              width={500} // Base resolution
-              height={700} // Base resolution
+              width={500} 
+              height={700} 
               className="w-48 h-auto sm:w-72 md:w-96 relative z-10 bottom-0"
             />
           </div>

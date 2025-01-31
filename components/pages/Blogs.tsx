@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import React from "react";
 
@@ -21,7 +22,7 @@ const stats = [
       " Augue nulla montes, eget congue dolor magna vitae porttitor. Mollis aliquam tristique porttitor blandit nibh dui tristique quam......",
   },
 ];
-const Blogs = ({ sections }) => {
+const Blogs = ({ sections }: any) => {
   return (
     <div>
       <section
@@ -73,7 +74,7 @@ const Blogs = ({ sections }) => {
               </div>
             </div>
 
-            {/* Visa Process Card */}
+        
             <div className="bg-white rounded-lg shadow-lg overflow-hidden flex items-center justify-center flex-col py-8 px-4">
               <Image
                 src="/id-card.png"
@@ -91,7 +92,7 @@ const Blogs = ({ sections }) => {
               </div>
             </div>
 
-            {/* Documentation Card */}
+         
             <div className="bg-white rounded-lg shadow-lg overflow-hidden flex items-center justify-center flex-col py-8 px-4">
               <Image
                 src="/documentation.png"
@@ -109,7 +110,6 @@ const Blogs = ({ sections }) => {
               </div>
             </div>
 
-            {/* Accommodation Card */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden flex items-center justify-center flex-col py-8 px-4">
               <Image
                 src="/house-bookshelves.png"
@@ -127,7 +127,7 @@ const Blogs = ({ sections }) => {
               </div>
             </div>
 
-            {/* Free Counseling Card */}
+  
             <div className="bg-white rounded-lg shadow-lg overflow-hidden flex items-center justify-center flex-col py-8 px-4">
               <Image
                 src="/marriage-counseling.png"

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import React, { useState } from "react";
 import { LiaUniversitySolid } from "react-icons/lia";
@@ -23,14 +24,13 @@ const cards = [
   },
 ];
 
-const Mbbs = ({ sections }) => {
+const Mbbs = ({ sections }: any) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
- 
   const getVisibleCards = () => {
-    if (window.innerWidth >= 1024) return 3; 
-    if (window.innerWidth >= 640) return 2; 
-    return 1; 
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 640) return 2;
+    return 1;
   };
 
   const visibleCards = getVisibleCards();
@@ -67,7 +67,6 @@ const Mbbs = ({ sections }) => {
           in Uzbekistan
         </h1>
 
-        {/* Carousel Wrapper */}
         <div className="relative w-full max-w-6xl flex items-center justify-center mt-10 overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out"
@@ -90,14 +89,13 @@ const Mbbs = ({ sections }) => {
                 }}
               >
                 <div className="bg-white  shadow-lg rounded-2xl p-4 sm:p-6 text-center flex flex-col items-center border-2 w-full relative">
-                  {/* Image */}
                   <div className="relative w-full">
                     <Image
                       src={card.image}
                       alt={card.title}
                       className="object-cover rounded-lg"
-                      width={400} 
-                      height={300} 
+                      width={400}
+                      height={300}
                       layout="responsive"
                     />
                   </div>
@@ -111,7 +109,6 @@ const Mbbs = ({ sections }) => {
                     </h2>
                   </div>
 
-                  {/* Fee Structure and Data */}
                   <div className="flex justify-center  flex-col items-center w-full mt-2 px-3 sm:px-4 text-gray-700 text-xs sm:text-sm">
                     <p className=" font-bold">
                       Fee Structure:
@@ -122,7 +119,6 @@ const Mbbs = ({ sections }) => {
                     </p>
                   </div>
 
-                  {/* Buttons */}
                   <div className="flex gap-2 mt-4">
                     <button className="border-2 text-xs sm:text-sm border-[#1CB5BD] text-[#1CB5BD] px-3 sm:px-4 py-1 sm:py-2 rounded-md transition-all duration-300 hover:bg-[#1CB5BD] hover:text-white">
                       Read More
@@ -137,7 +133,6 @@ const Mbbs = ({ sections }) => {
           </div>
         </div>
 
-        {/* Navigation Buttons */}
         <div className="flex items-center gap-4 mt-6">
           <button
             className="bg-[#1CB5BD] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#1CB5BD] transition"
@@ -153,7 +148,7 @@ const Mbbs = ({ sections }) => {
           </button>
         </div>
 
-        {/* Dots Navigation */}
+      
         <div className="flex justify-center mt-6 space-x-2">
           {Array.from({ length: totalSlides }).map((_, index) => (
             <button

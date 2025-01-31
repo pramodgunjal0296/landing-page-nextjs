@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; 
 
-export default function Navbar({ sections }) {
+export default function Navbar({ sections }: any) {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (section: string) => {

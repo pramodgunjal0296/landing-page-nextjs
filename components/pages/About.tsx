@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { FaBook, FaDollarSign, FaUserGraduate, FaHome } from "react-icons/fa";
 
@@ -25,7 +26,7 @@ const cards = [
   },
 ];
 
-const About = ({sections}) => {
+const About = ({sections}: any) => {
   return (
     <>
     {/* <Section /> */}

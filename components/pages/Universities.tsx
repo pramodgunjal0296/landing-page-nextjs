@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Image from "next/image";
@@ -12,7 +13,7 @@ const stats = [
   { image: "/Education.png", count: "10", label: "Universities affiliated with us!" },
   { image: "/Visa.png", count: "100+", label: "Visa Assistance" },
 ];
-const Universities = ({ sections }) => {
+const Universities = ({ sections }: any) => {
   return (
     <div>
       <section
@@ -28,7 +29,6 @@ const Universities = ({ sections }) => {
               </span>
             </h1>
             <ul className="space-y-4">
-              {/* {[...Array(4)].map((_, index) => ( */}
               <li className="flex items-start gap-3">
                 <RiGraduationCapLine
                   size={30}
@@ -81,7 +81,6 @@ const Universities = ({ sections }) => {
                   </p>
                 </div>
               </li>
-              {/* ))} */}
             </ul>
           </div>
           <div className="flex justify-center">
