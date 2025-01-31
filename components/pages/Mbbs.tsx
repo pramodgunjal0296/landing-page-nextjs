@@ -28,8 +28,9 @@ const Mbbs = ({ sections }: any) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const getVisibleCards = () => {
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 640) return 2;
+    if (typeof window !== "undefined" && window.innerWidth >= 1024) return 3;
+    
+    if (typeof window !== "undefined" && window.innerWidth >= 640) return 2;
     return 1;
   };
 
